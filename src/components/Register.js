@@ -12,9 +12,9 @@ const Register = () => {
     const handleRegister=(e)=>{
         e.preventDefault()
         console.log(username,password,cpassword)
-        axios.post('http://localhost:3005/users/register',{username,password})
+        axios.post('http://localhost:3005/user/register',{username,password})
             .then(response=>console.log(response.data))
-            .catch(err=>console.log(err))
+            .catch(err=>window.alert(err.response.data.error))
     }
 
     //use state is asyncronous so it follows steps so first ma nei set state garcha ani check garcha
