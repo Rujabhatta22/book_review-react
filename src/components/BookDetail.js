@@ -1,9 +1,6 @@
-import { useParams } from "react-router-dom"
-
-function BookDetail({ books }){
-    const bookId=useParams().id
+function BookDetail({ book }){
     
-    const book = books.find(b=> b._id === bookId)
+    // const book = books.find(b=> b._id === bookId)
     return(
         <div>
             <h2>
